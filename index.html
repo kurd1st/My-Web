@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moe's Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico">
+    </head>
+<body>
+<header>
+    <h1>Welcome to my Personal Portfolio</h1>
+</header>
+
+<nav>
+    <ul class="vertical-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+<hr>
+<main>
+     <p>Hello! Welcome to my personal portfolio website. This site was created
+        as part of a Web Project Case Study to practice HTML and web design
+        principles.</p>
+
+        <p>Throughout the semester, this website will continue to grow as new
+        pages and content are added. The goal is to create a complete,
+        professional personal portfolio.</p>
+
+        <p id="welcomeText">Hello! Welcome to my personal portfolio website.</p>
+
+        <button onclick="showMessage()">Click Me</button>       
+
+</main>
+
+<footer> 
+    <br>
+           <i>  <small> 
+                Copyright &copy; 2026 Personal Portfolio
+            </small> <br>
+            <a href="mailto:mh38283@georgiasouthern.edu">mh38283@georgiasouthern.edu</a>
+        </footer>
+    <hr>
+
+    <script>
+        function showMessage() {
+          alert("Thanks for visiting my portfolio!");
+        }
+      
+        window.onload = function() {
+          document.getElementById("welcomeText").innerHTML += " I'm glad you're here!";
+        };
+      </script>
+      
+    </body>
+</html>

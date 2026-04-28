@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects | Moe's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+
+<header>
+    <h1>Projects</h1>
+</header>
+
+ 
+
+<nav>
+  <ul class="vertical-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<hr>
+
+<main>
+  <img src="images/1.png" alt="Screenshot of portfolio" id="portfolioimg">
+
+  <div class="project-content">
+    <h2 class="project-title">Personal Portfolio Website</h2>
+    
+    <p class="project-description">
+      I designed and built my own personal portfolio website to showcase my skills, education, and projects. This project gave me hands-on experience in building a full website from scratch while focusing on responsive design, user experience, and clean code.
+    </p>
+    
+    <p class="project-tech"><strong>Technologies Used:</strong> HTML | CSS | JavaScript</p>
+    
+    <ul class="project-features">
+      <li>Fully responsive layout for desktop and mobile devices</li>
+      <li>Interactive navigation menu for smooth page transitions</li>
+      <li>Custom styling and layout using CSS to reflect a personal brand</li>
+      <li>Implemented JavaScript for dynamic features and user interaction</li>
+    </ul>
+    
+    <h2>My Process:</h2>
+    <ol class="project-process">
+      <li>Planned the site structure and pages: Home, About Me, Education, Skills, Projects, Contact</li>
+      <li>Learned and applied HTML to create the content and structure</li>
+      <li>Used CSS to design the layout, colors, and responsive styling</li>
+      <li>Added interactivity with JavaScript, like menu toggling and project effects</li>
+      <li>Tested across devices to ensure accessibility and usability</li>
+    </ol>
+    
+    <p class="project-learned"><strong>What I Learned:</strong> Writing clean HTML, styling with CSS, adding JavaScript interactions, and organizing a multi-page website project from start to finish.</p>
+    
+</div>
+
+<h2>Project Table</h2>
+<div id="projectTable"></div>
+
+<button id="showAlertBtn">Show Project Message</button>
+
+</main>
+
+<footer>
+    <small>
+        Copyright &copy; 2026 Personal Portfolio
+    </small>
+    <br>
+    <a href="mailto:mh38283@georgiasouthern.edu">
+        mh38283@georgiasouthern.edu
+    </a>
+</footer>
+
+<script>
+  function generateProjectTable() {
+    const projects = [
+      ["Project", "Tech", "Status"],
+      ["Portfolio Website", "HTML/CSS/JS", "Completed"]
+    ];
+
+    let table = "<table>";
+
+    projects.forEach(function(row, index) {
+      table += "<tr>";
+      row.forEach(function(cell) {
+        table += index === 0 ? "<th>" + cell + "</th>" : "<td>" + cell + "</td>";
+      });
+      table += "</tr>";
+    });
+
+    table += "</table>";
+
+    document.getElementById("projectTable").innerHTML = table;
+  }
+
+  generateProjectTable();
+
+  document.getElementById("showAlertBtn").addEventListener("click", function() {
+    alert("This project shows my web development skills!");
+  });
+</script>
+
+</body>
+</html>

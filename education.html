@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Education | Moe's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+
+<header>
+    <h1>Education</h1>
+</header>
+
+<nav>
+    <ul class="vertical-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<hr>
+
+<main>
+    <h2>Academic Background</h2>
+
+    <p>
+        I graduated from <strong>Herschel V. Jenkins High School</strong>, where I
+        developed an early interest in technology and problem-solving.
+    </p>
+
+    <p>
+        I am currently pursuing a <strong>Bachelor of Science in Information Technology</strong>
+        at <strong>Georgia Southern University</strong>.
+    </p>
+
+    <p>
+        My primary concentration is <strong>Cybersecurity</strong>, where I am learning
+        about system security, networking, and protecting digital assets.
+    </p>
+
+    <h2>Additional Learning</h2>
+
+    <p>
+        In addition to my college coursework, I actively study through third-party
+        learning platforms that provide both unofficial and official certificates.
+        One of my main platforms is <strong>TryHackMe</strong>, which I use to gain
+        hands-on experience in cybersecurity concepts and practical labs.
+    </p>
+
+    <h2>Education Table</h2>
+    <div id="educationTable"></div>
+
+</main>
+
+<footer>
+    <small>
+        Copyright &copy; 2026 Personal Portfolio
+    </small>
+    <br>
+    <a href="mailto:mh38283@georgiasouthern.edu">
+        mh38283@georgiasouthern.edu
+    </a>
+</footer>
+
+<script>
+    function generateEducationTable() {
+      const data = [
+        ["Institution", "Program", "Focus"],
+        ["Herschel V. Jenkins High School", "Diploma", "General"],
+        ["Georgia Southern University", "B.S. IT", "Cybersecurity"],
+        ["TryHackMe", "Training", "Cyber Labs"]
+      ];
+  
+      let table = "<table>";
+  
+      data.forEach(function(row, index) {
+        table += "<tr>";
+        row.forEach(function(cell) {
+          table += index === 0 ? "<th>" + cell + "</th>" : "<td>" + cell + "</td>";
+        });
+        table += "</tr>";
+      });
+  
+      table += "</table>";
+  
+      document.getElementById("educationTable").innerHTML = table;
+    }
+  
+    generateEducationTable();
+  </script>
+  
+</body>
+</html>

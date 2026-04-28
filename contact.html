@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Moe's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+
+<header>
+    <h1>Contact</h1>
+</header>
+
+<nav>
+  <ul class="vertical-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<hr>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Feel free to reach out—I’d love to connect!</p>
+
+  
+  <div class="contact-info">
+    <p><strong>Email:</strong> <a href="mailto:mh38283@georgiasouthern.edu">mh38283@georgiasouthern.edu</a></p>
+  </div>
+
+ 
+  <form action="#" method="post" class="contact-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+
+<footer>
+    <small>
+        Copyright &copy; 2026 Personal Portfolio
+    </small>
+    <br>
+    <a href="mailto:mh38283@georgiasouthern.edu">
+        mh38283@georgiasouthern.edu
+    </a>
+</footer>
+
+<script>
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    alert("Thank you, " + name + "! Your message has been sent.");
+    document.querySelector(".contact-form").reset();
+  }
+
+  document.querySelector(".contact-form").addEventListener("submit", function(event) {
+    handleFormSubmit(event);
+  });
+</script>
+
+</body>
+</html>
